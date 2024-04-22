@@ -28,7 +28,10 @@ export default function Home() {
 
     return (
         <>
-            <div className=''>
+            <header className='header'>
+                <h1 className='title'>BruhMDB</h1>
+            </header>
+            {/* <div className=''>
                 {movieData.map(item => (
                     <div key={item.id} className=''>
                         <Image
@@ -42,7 +45,7 @@ export default function Home() {
                         </div>
                     </div>
                 ))}
-            </div>
+            </div> */}
         </>
     );
 }
