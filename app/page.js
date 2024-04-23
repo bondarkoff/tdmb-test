@@ -4,6 +4,7 @@ import Image from 'next/image';
 import axios from 'axios';
 
 import styles from './page.module.scss';
+import Header from './components/header/header';
 
 export default function Home() {
     const apiKey = '6dff64a731c5a6cee2b8a3eba1b1ab5d';
@@ -48,26 +49,7 @@ export default function Home() {
 
     return (
         <>
-            <header className={styles.header}>
-                <div className='bg'></div>
-                <div className='container'>
-                    <div className={styles.header__wrapper}>
-                        <h1>
-                            <a href='#'>BruhMDB</a>
-                        </h1>
-                        <div style={{ display: 'flex' }}>
-                            <button className={styles.header__btn}>
-                                <Image
-                                    src='/search-icon.svg'
-                                    width={24}
-                                    height={24}
-                                    alt='search-icon'
-                                />
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </header>
+            <Header />
             <main>
                 <div className='container'>
                     <div className='wrapper'>
@@ -95,10 +77,10 @@ export default function Home() {
                     </div> */}
                 </div>
 
-                <div className='top-rated'>
+                <div className={styles.rated}>
                     {topRated
                         .map(item => (
-                            <div key={item.id} className='top-rated-item'>
+                            <div key={item.id} className={styles.rated__items}>
                                 <Image
                                     src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
                                     alt={
@@ -112,7 +94,7 @@ export default function Home() {
                             </div>
                         ))
                         .slice(0, 21)}
-                    <div className='bgsec'></div>
+                    <div className={styles.rated__blur}></div>
                 </div>
             </main>
         </>

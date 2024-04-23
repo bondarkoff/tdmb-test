@@ -21,30 +21,6 @@ html {
     color: #fff;
 }
 
-.top-rated {
-    position: absolute;
-    top: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    z-index: -1;
-    &-item {
-        margin: 6px;
-        opacity: 0.25;
-        img {
-            border-radius: 25px;
-        }
-    }
-}
-
-.bg {
-    position: absolute;
-    width: 100%;
-    height: 100px;
-    background: rgb(26, 26, 26);
-    background: linear-gradient(180deg, rgba(26, 26, 26, 1) 0%, rgba(26, 26, 26, 0) 100%);
-}
-
 .wrapper {
     padding-top: 250px;
     display: flex;
@@ -70,13 +46,4 @@ html {
             outline: none;
         }
     }
-}
-
-.bgsec {
-    bottom: 0;
-    position: absolute;
-    width: 100%;
-    height: 250px;
-    background: rgb(26, 26, 26);
-    background: linear-gradient(0deg, rgba(26, 26, 26, 1) 19%, rgba(26, 26, 26, 0) 100%);
 }
